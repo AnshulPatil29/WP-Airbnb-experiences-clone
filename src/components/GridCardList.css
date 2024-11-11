@@ -1,0 +1,24 @@
+.grid-card-list-container {
+    width: 100%;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+
+.grid-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); 
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .grid-card-list {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+}
+
+@media (max-width: 48rem) {
+    .grid-card-list-container {
+        padding: 0.2rem; 
+    }
+}

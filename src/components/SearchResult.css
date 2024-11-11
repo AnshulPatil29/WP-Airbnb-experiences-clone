@@ -1,0 +1,11 @@
+.search-results-container {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .results-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  

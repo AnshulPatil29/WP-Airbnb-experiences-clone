@@ -1,0 +1,82 @@
+.card-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 0.25rem;
+}
+
+.card-list::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 0.25rem;
+}
+
+.card-container {
+    min-width: 12.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-list-container {
+    position: relative;
+}
+
+.scroll-buttons {
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.scroll-button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 48rem) {
+    .scroll-buttons {
+        display: none;
+    }
+}
+@media (min-width: 48rem){
+    .card-list-container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
