@@ -6,7 +6,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json()); 
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -20,7 +20,6 @@ db.connect(err => {
     console.log('MySQL connected...');
 });
 
-// Fetch all cards
 app.get('/api/cards', (req, res) => {
     const sql = 'SELECT * FROM cards';
     db.query(sql, (err, results) => {
@@ -33,7 +32,6 @@ app.get('/api/cards', (req, res) => {
     });
 });
 
-// Search endpoint
 app.get('/api/search', (req, res) => {
     const { query } = req.query;
     const sql = `
@@ -53,7 +51,6 @@ app.get('/api/search', (req, res) => {
     });
 });
 
-// Fetch a specific card and its reviews
 app.get('/api/cards/:id', (req, res) => {
     const cardId = req.params.id;
 
@@ -87,7 +84,6 @@ app.get('/api/cards/:id', (req, res) => {
     });
 });
 
-// Add a new review
 app.post('/api/reviews', (req, res) => {
     const { cardId, reviewerName, reviewText, rating } = req.body;
 
@@ -109,14 +105,13 @@ app.post('/api/reviews', (req, res) => {
             reviewer_name: reviewerName,
             review_text: reviewText,
             rating: rating,
-            created_at: new Date()  // Use the current date
+            created_at: new Date() 
         };
 
         res.status(201).json({ message: 'Review added successfully', review: newReview });
     });
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
