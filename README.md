@@ -1,5 +1,7 @@
 # Airbnb Experiences Clone
 
+This is a responsive Airbnb website created using **React, NodeJS, MySQL, and Express**.
+
 To run this project on your device:
 
 ### Setup:
@@ -60,6 +62,28 @@ To run this project on your device:
   npm start
   ```
 
+### Project Features:
+
+#### Desktop Layout
+- **Home Page**:
+  ![Home Page](Images/HomePage.png)
+
+- **Details Page**:
+  ![Details Page](Images/Details.png)
+
+- **Search Feature**:
+  ![Search Feature](Images/Search.png)
+
+#### Mobile Layout
+- **Home Page**:
+  ![Home Page - Mobile](Images/HomePage_mobile.jpg)
+
+- **Details Page**:
+  ![Details Page - Mobile](Images/Details_mobile.jpg)
+
+- **Search Feature**:
+  ![Search Feature - Mobile](Images/Search_mobile.jpg)
+
 ### Note:
 * `concurrently` is set up to run both the backend and frontend upon executing `npm start`.
-* Known Issue: The delete review button currently does not function as expected, and there are no plans for further updates.
+* **Known Issue:** The delete review button currently does not function as expected, and there are no plans for further updates.
