@@ -10,22 +10,27 @@ To run this project on your device:
 
 2. **Navigate to the Project Directory:**
    ```bash
-   cd <project-folder>
+   cd WP-Airbnb-experiences-clone
    ```
 
-3. **Install Dependencies for the Frontend:**
+3. **Install Root Dependencies (including `concurrently`):**
+   ```bash
+   npm install
+   ```
+
+4. **Install Dependencies for the Frontend:**
    ```bash
    cd frontend
    npm install
    ```
 
-4. **Install Dependencies for the Backend:**
+5. **Install Dependencies for the Backend:**
    ```bash
    cd ../backend
    npm install
    ```
 
-5. **Navigate Back to the Project Root Directory:**
+6. **Navigate Back to the Project Root Directory:**
    ```bash
    cd ..
    ```
