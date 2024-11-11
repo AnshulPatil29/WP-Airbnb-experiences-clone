@@ -76,12 +76,15 @@ To run this project on your device:
 
 #### Mobile Layout
 - **Home Page**:
+  
   <img src="Images/HomePage_mobile.jpg" alt="Home Page - Mobile" width="300"/>
 
 - **Details Page**:
+  
   <img src="Images/Details_mobile.jpg" alt="Details Page - Mobile" width="300"/>
 
 - **Search Feature**:
+  
   <img src="Images/Search_mobile.jpg" alt="Search Feature - Mobile" width="300"/>
 
 ### Note:
