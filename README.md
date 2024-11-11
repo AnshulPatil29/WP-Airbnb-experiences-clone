@@ -24,7 +24,7 @@ To run this project on your device:
 ### Setup:
 1. **Clone the Repository:**
    ```bash
-   git clone [repository-url](https://github.com/AnshulPatil29/WP-Airbnb-experiences-clone/tree/main)
+   git clone https://github.com/AnshulPatil29/WP-Airbnb-experiences-clone/tree/main
    ```
 
 2. **Navigate to the Project Directory:**
@@ -51,6 +51,5 @@ To run this project on your device:
    ```
 
 ### Note:
-* I have set up `concurrently` to run both the backend and frontend upon executing `npm start`.
-* There is a bug with the delete review button which renders it useless but there are no plans on updating it.
-* There will be no further updates to this project.
+* `concurrently` is set up to run both the backend and frontend upon executing `npm start`.
+* Known Issue: The delete review button currently does not function as expected, and there are no plans for further updates.
