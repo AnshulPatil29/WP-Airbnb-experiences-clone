@@ -2,6 +2,11 @@
 
 This is a responsive Airbnb website created using **React, NodeJS, MySQL, and Express**.
 
+> **Requirements:**  
+> - **MySQL 8.0.35.0 or later**  
+> - **NodeJS**  
+> - An appropriate **Python version** (to handle database scripts).
+
 To run this project on your device:
 
 ### Setup:
