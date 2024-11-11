@@ -24,7 +24,7 @@ To run this project on your device:
 ### Setup:
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
+   git clone [repository-url](https://github.com/AnshulPatil29/WP-Airbnb-experiences-clone/tree/main)
    ```
 
 2. **Navigate to the Project Directory:**
