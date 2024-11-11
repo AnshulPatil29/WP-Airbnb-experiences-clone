@@ -9,7 +9,7 @@ export default function SearchResults() {
   const searchQuery = new URLSearchParams(location.search).get('query');
 
   useEffect(() => {
-    fetch(`http://192.168.1.60:5000/api/search?query=${encodeURIComponent(searchQuery)}`)
+    fetch(`http://localhost:5000/api/search?query=${encodeURIComponent(searchQuery)}`)
       .then(response => response.json())
       .then(data => setResults(data))
       .catch(error => console.error('Error fetching search results:', error));

@@ -14,9 +14,8 @@ export default function CardDetail() {
     const [reviewerName, setReviewerName] = useState('');
     const [error, setError] = useState('');
 
-    // Fetch card and review data
     useEffect(() => {
-        fetch(`http://192.168.1.60:5000/api/cards/${id}`)
+        fetch(`http://localhost:5000/api/cards/${id}`)
             .then(response => response.json())
             .then(data => {
                 setCard(data.card);
@@ -24,8 +23,6 @@ export default function CardDetail() {
             })
             .catch(error => console.error('Error fetching card details:', error));
     }, [id]);
-
-    // Cookie helper functions
     const setCookie = (name, value, days) => {
         const expires = new Date(Date.now() + days * 86400000).toUTCString();
         document.cookie = `${name}=${value}; expires=${expires}; path=/`;
@@ -36,8 +33,6 @@ export default function CardDetail() {
         const parts = value.split(`; ${name}=`);
         return parts.length === 2 ? parts.pop().split(';').shift() : null;
     };
-
-    // Check if a review has already been submitted
     const hasReviewed = getCookie(`reviewed_card_${id}`);
 
     const handleReviewSubmit = () => {
@@ -45,10 +40,8 @@ export default function CardDetail() {
             setError('All fields are required.');
             return;
         }
-
-        // Post review only if no previous review exists
         if (!hasReviewed) {
-            fetch('http://192.168.1.60:5000/api/reviews', {
+            fetch('http://localhost:5000/api/reviews', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ cardId: id, reviewerName, reviewText, rating }),

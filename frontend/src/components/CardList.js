@@ -9,7 +9,7 @@ export default function CardList() {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        fetch('http://192.168.1.60:5000/api/cards')
+        fetch('http://localhost:5000/api/cards')
             .then(response => response.json())
             .then(data => setCards(data))
             .catch(error => console.error('Error fetching card data:', error));
